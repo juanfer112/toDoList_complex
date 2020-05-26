@@ -6,6 +6,10 @@ import { ToDoList } from "./toDoList";
 import "../../styles/index.scss";
 
 export class InputToDo extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		const { item, handleChange, handleSubmit } = this.props;
 		return (
@@ -21,8 +25,8 @@ export class InputToDo extends React.Component {
 							type="text"
 							className="form-control text-capitalize"
 							placeholder="add to do items"
-							value={this.state.item}
-							onChange={this.handleChange}
+							value={item}
+							onChange={handleChange}
 						/>
 					</div>
 					<button
@@ -35,6 +39,11 @@ export class InputToDo extends React.Component {
 		);
 	}
 }
+InputToDo.propTypes = {
+	item: PropTypes.any,
+	handleChange: PropTypes.any,
+	handleSubmit: PropTypes.any
+};
 
 /*export class InputToDo extends React.Component {
 	constructor() {

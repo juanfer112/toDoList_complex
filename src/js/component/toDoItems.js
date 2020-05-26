@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ToDoList from "./toDoList";
 
 //include images into your bundle
@@ -22,3 +23,6 @@ export default class ToDoItems extends React.Component {
 		);
 	}
 }
+ToDoItems.propTypes = {
+	title: PropTypes.any
+};

@@ -25,3 +25,7 @@ export class ToDoList extends React.Component {
 		);
 	}
 }
+
+ToDoList.propTypes = {
+	items: PropTypes.any
+};
